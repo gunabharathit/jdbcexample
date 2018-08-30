@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+<p>Employee Management System</p>
+ 
+<form>
+Name
+<input type="text" name="Name">
+<br>
+age
+<input type="text" name="age">
+</form>
+#myHeader {
+    background-color: lightblue;
+    color: black;
+    padding: 10px;
+    text-align: center;
+}
+<h1 id="myHeader">login</h1>
+
+</body>
+</html>

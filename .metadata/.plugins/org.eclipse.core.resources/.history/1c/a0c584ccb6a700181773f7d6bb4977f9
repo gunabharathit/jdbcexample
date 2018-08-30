@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+<style>
+table {
+	border-collapse: collapse;
+	width: 100%;
+}
+
+td {
+	text-align: center;
+	padding: 8px;
+}
+.avatar{
+    vertical-align: middle;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+</style>
+<center>
+	<br> <br> <br> <b><i>Employee Management System</i></b>
+</center>
+</head>
+<body>
+<form method="post" action="Password">
+		<center>
+			<table>
+			 <img src="avatar.png" > 
+				<tr>                     
+					<td><label for="uname"><i>Username : </i></label> <input type="text"
+						placeholder="Enter Username" name="uname" required></td>
+				</tr>
+
+				<tr>
+					<td><i>Password: </i><input type="password" placeholder="Password"
+						name="pwd" required>
+					</td>
+				</tr>
+
+				<td></td>
+				<tr>
+					<td>
+						<button type="submit"><i>Login</i></button>
+					</td>
+				</tr>
+			</table>
+		</center>
+	</form>
+</body>
+</html>

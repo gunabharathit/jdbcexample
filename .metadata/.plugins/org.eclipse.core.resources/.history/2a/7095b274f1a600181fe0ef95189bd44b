@@ -1,0 +1,35 @@
+package com.password;
+
+import java.io.IOException;
+import java.io.PrintWriter;
+
+import javax.servlet.ServletException;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+import org.apache.catalina.servlet4preview.RequestDispatcher;
+
+import com.empDao.EmpDao;
+
+public class Password extends HttpServlet {
+
+		  public void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		    // System.out.println("doPost() called");
+		    String username = request.getParameter("uname");
+		    String password = request.getParameter("pwd");
+		    PrintWriter out = response.getWriter();
+//		    out.println(username);
+//		    out.println(password);
+		    EmpDao empDetails = new EmpDao();
+		    
+		    if (empDetails.isValidUser(username, password)) {
+		      out.println("<i>Login Successful</i>");
+		      RequestDispatcher rd = request.getRequestDispatcher("/EmployeeDetails.html");
+		      rd.include(request, response);
+		    } else {
+		      out.println("<h1><i>OOPS!!! You have entered the Wrong UserName or Password</i><h1>");
+		    }
+		  }
+
+}
